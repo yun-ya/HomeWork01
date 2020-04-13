@@ -39,6 +39,7 @@
             xhr.onload = function () {
                 if (xhr.readyState == 4 && xhr.status == 200) {
                     zipCodeArray = JSON.parse(this.responseText);
+                    console.log(this.responseText)
                     let zipCode = [];
                     zipCodeArray.forEach((item) => {
                         let obj = { City: item.CityName, District: [] }
@@ -64,7 +65,7 @@
                 }
 
             }
-            xhr.open("GET", "http://127.0.0.1:5500/TaiwanAddress/AllData.json");
+            xhr.open("GET", "http://127.0.0.1:5501/AllData.json");
             xhr.send();
         }
         // let body = document.querySelector('body');
