@@ -235,7 +235,7 @@
             "name": "Aphelios",
             "difficulty": 10,
             "splashImageUrl": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Aphelios_0.jpg",
-            "profileImageUrl": "",
+            "profileImageUrl": "https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt5dd3569fc67d6664/5db05fa8bd24496c390ae4d8/RiotX_ChampionList_aurelionsol.jpg",
             "roles": [
                 "Marksman"
             ],
@@ -3286,7 +3286,7 @@
             "name": "Sett",
             "difficulty": 2,
             "splashImageUrl": "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Sett_0.jpg",
-            "profileImageUrl":"",
+            "profileImageUrl":"https://images.contentstack.io/v3/assets/blt731acb42bb3d1659/blt24f4735ebde3c22b/5db08d642dc72966da74686e/RiotX_ChampionList_sett.jpg",
             "roles": [
                 "Fighter",
                 "Tank"
