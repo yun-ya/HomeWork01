@@ -13,30 +13,54 @@
             iphone: {
                 all: {
                     baseimg: 'apple/ipad-all.png'
-                    },
-                outward:[
-                    {color:'紅色',colorvalue:'#f00', colorimg:'apple/iphone11-red.png'},
-                    {color:'綠色',colorvalue:'#00f', colorimg:'apple/iphone11-green.png'},
-                    {color:'黑色',colorvalue:'#000', colorimg:'apple/iphone11-black.png'},
-                    {color:'白色',colorvalue:'#fff', colorimg:'apple/iphone11-white.png'},
-                    {color:'黃色',colorvalue:'#ff0', colorimg:'apple/iphone11-yellow.png'},
-                    {color:'紫色',colorvalue:'#f0f', colorimg:'apple/iphone11-purple.png'}
-                    ],
-                stronge:[
-                    {memory:'64GB',price:'NT$24,900'},
-                    {memory:'128GB',price:'NT$26,900'},
-                    {memory:'256GB',price:'NT$30,400'}
+                },
+                outward: [
+                    { color: '紅色', colorvalue: '#f00', colorimg: 'apple/iphone-red.png' },
+                    { color: '綠色', colorvalue: '#00f', colorimg: 'apple/iphone-green.png' },
+                    { color: '黑色', colorvalue: '#000', colorimg: 'apple/iphone-black.png' },
+                    { color: '白色', colorvalue: '#fff', colorimg: 'apple/iphone-white.png' },
+                    { color: '黃色', colorvalue: '#ff0', colorimg: 'apple/iphone-yellow.png' },
+                    { color: '紫色', colorvalue: '#f0f', colorimg: 'apple/iphone-purple.png' }
+                ],
+                stronge: [
+                    { memory: '64GB', price: 'NT$24,900' },
+                    { memory: '128GB', price: 'NT$26,900' },
+                    { memory: '256GB', price: 'NT$30,400' }
                 ]
             },
-            mac: [{
-                color: '黃色',
-                price: '25000',
-                stroge: '64GB',
-                network: 'wifi',
-                pic: ''
+            ipad: {
+                all: {
+                    baseimg: 'apple/ipad-all.png'
+                },
+                outward: [
+                    { color: '金色', colorvalue: 'gold', colorimg: 'apple/iphone11-red.png' },
+                    { color: '銀色', colorvalue: 'silver', colorimg: 'apple/iphone11-green.png' },
+                    { color: '太空灰色', colorvalue: 'gray', colorimg: 'apple/iphone11-black.png' }
+                ],
+                stronge: [
+                    { memory: '64GB', price: 'NT$24,900' },
+                    { memory: '128GB', price: 'NT$26,900' },
+                    { memory: '256GB', price: 'NT$30,400' }
+                ]
             },
-
-            ]
+            mac: {
+                all: {
+                    baseimg: 'apple/ipad-all.png'
+                },
+                outward: [
+                    { color: '紅色', colorvalue: '#f00', colorimg: 'apple/iphone11-red.png' },
+                    { color: '綠色', colorvalue: '#00f', colorimg: 'apple/iphone11-green.png' },
+                    { color: '黑色', colorvalue: '#000', colorimg: 'apple/iphone11-black.png' },
+                    { color: '白色', colorvalue: '#fff', colorimg: 'apple/iphone11-white.png' },
+                    { color: '黃色', colorvalue: '#ff0', colorimg: 'apple/iphone11-yellow.png' },
+                    { color: '紫色', colorvalue: '#f0f', colorimg: 'apple/iphone11-purple.png' }
+                ],
+                stronge: [
+                    { memory: '64GB', price: 'NT$24,900' },
+                    { memory: '128GB', price: 'NT$26,900' },
+                    { memory: '256GB', price: 'NT$30,400' }
+                ]
+            }
         };
         var boby = document.getElementsByTagName(`body`)[0];
         var div = document.createElement(`div`);
