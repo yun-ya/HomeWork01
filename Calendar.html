@@ -156,7 +156,8 @@
       margin: 0;
       cursor: pointer;
       line-height: 25px;
-      white-space:nowrap;/* 死都不換行 */
+      white-space: nowrap;
+      /* 死都不換行 */
     }
 
     #color_sel,
@@ -296,7 +297,7 @@
     }
 
     function refrshdate() {
-      
+
       var totalday = new Date(year, month + 1, 0).getDate()
       var firstDay = daystart(year, month);
       var style = "";
@@ -349,18 +350,18 @@
       const intime = $('#intime').val();
       const message = $('#message').val();
       const color = $('#color_sel').val();
-      var object = { Day: indate, Time: intime, Message: message, Color: color }
-      if(object.Day == '' && object.Time == '' && object.Message == '' && object.Color == ''){
+      if (indate == '' || intime == '' || message == '' || color == '') {
         alert('請確認有無填寫錯誤')
       }
-      else{
+      else {
+        var object = { Day: indate, Time: intime, Message: message, Color: color }
         arrayJson.push(object);
-      localStorage.setItem('item', JSON.stringify(arrayJson))
+        localStorage.setItem('item', JSON.stringify(arrayJson))
 
-      // document.getElementById('intime').value = "";
-      document.getElementById('message').value = "";
-      refrshdate();
-      }      
+        // document.getElementById('intime').value = "";
+        document.getElementById('message').value = "";
+        refrshdate();
+      }
     }
 
 
@@ -399,29 +400,35 @@
 
     }
     var pindex = undefined;
-    
+
     $('#delete').click(function () {
       arrayJson.splice(pindex, 1);
       localStorage.setItem('item', JSON.stringify(arrayJson));
       $('#changeModal').modal('hide');
       refrshdate();
     })
-    $('#update').click(function(){
+    $('#update').click(function () {
       var newdate = $('#newdate').val();
       var newtime = $('#newtime').val();
       var newmessage = $('#newmessage').val();
-      var newcolor = $('#newcolor_sel').val()
-      var newobject = { Day: newdate, Time: newtime, Message: newmessage, Color: newcolor }
-      arrayJson.splice(pindex, 1, newobject);
-      localStorage.setItem('item', JSON.stringify(arrayJson));
-      $('#changeModal').modal('hide');
-      refrshdate();
+      var newcolor = $('#newcolor_sel').val();
+      if (newdate == '' || newtime == '' || newmessage == '' || newcolor == '') {
+        alert('請確認有無填寫錯誤')
+      }
+      else {
+        var newobject = { Day: newdate, Time: newtime, Message: newmessage, Color: newcolor }
+        arrayJson.splice(pindex, 1, newobject);
+        localStorage.setItem('item', JSON.stringify(arrayJson));
+        $('#changeModal').modal('hide');
+        refrshdate();
+      }
+
     })
 
     window.onload = () => {
       refrshdate();
     }
-   
+
 
   </script>
 </body>
