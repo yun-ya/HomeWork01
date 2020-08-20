@@ -289,7 +289,7 @@
     var year = mydate.getFullYear();
     var month = mydate.getMonth();
     var day = mydate.getDate();
-    var arrayJson = undefined;
+    var arrayJson = [];
     function daystart(year, month) {
       let day = new Date(year, month, 1);
       return (day.getDay());
@@ -350,13 +350,17 @@
       const message = $('#message').val();
       const color = $('#color_sel').val();
       var object = { Day: indate, Time: intime, Message: message, Color: color }
-      arrayJson.push(object);
+      if(object.Day == '' && object.Time == '' && object.Message == '' && object.Color == ''){
+        alert('請確認有無填寫錯誤')
+      }
+      else{
+        arrayJson.push(object);
       localStorage.setItem('item', JSON.stringify(arrayJson))
 
       // document.getElementById('intime').value = "";
       document.getElementById('message').value = "";
-
       refrshdate();
+      }      
     }
 
 
